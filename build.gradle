@@ -7,7 +7,7 @@ buildscript {
         retrofit_version = '2.5.0'
         room_version = '2.1.0-alpha06'
         anko_version = '0.10.8'
-        nav_version = '1.0.0-alpha01'
+        nav_version = '2.1.0-alpha01'
     }
     repositories {
         google()

@@ -33,7 +33,7 @@ class HomeFragment: Fragment(), Injectable {
     }
 
     private fun observeSomething() {
-        viewModel.data.observe(this, Observer {
+        viewModel.data.observe(viewLifecycleOwner, Observer {
             // Update the UI
         })
     }
