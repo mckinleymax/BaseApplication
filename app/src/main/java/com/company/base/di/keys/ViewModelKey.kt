@@ -1,4 +1,4 @@
-package com.company.base.di
+package com.company.base.di.keys
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

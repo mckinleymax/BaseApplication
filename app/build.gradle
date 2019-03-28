@@ -38,6 +38,8 @@ dependencies {
     implementation "com.google.dagger:dagger-android-support:$dagger_version"
     kapt "com.google.dagger:dagger-compiler:$dagger_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.squareup.inject:assisted-inject-processor-dagger2:$assistedinject_version"
+    compileOnly "com.squareup.inject:assisted-inject-annotations-dagger2:$assistedinject_version"
 
     // Retrofit - http://square.github.io/retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -53,6 +55,9 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0-alpha03'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt 'androidx.lifecycle:lifecycle-compiler:2.1.0-alpha03'
+
+    // WorkManager
+    implementation "android.arch.work:work-runtime:$work_version"
 
     //Navigation
     implementation "androidx.navigation:navigation-runtime:$nav_version"

@@ -1,7 +1,7 @@
 package com.company.base.di.module.home
 
 import androidx.lifecycle.ViewModel
-import com.company.base.di.ViewModelKey
+import com.company.base.di.keys.ViewModelKey
 import com.company.base.ui.home.HomeViewModel
 import dagger.Binds
 import dagger.Module

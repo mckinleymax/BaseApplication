@@ -3,7 +3,7 @@ package com.company.base.di.module
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.company.base.di.ViewModelFactory
-import com.company.base.di.ViewModelKey
+import com.company.base.di.keys.ViewModelKey
 import com.company.base.di.module.home.HomeViewModelModule
 import com.company.base.ui.MainViewModel
 import dagger.Binds
