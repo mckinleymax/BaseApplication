@@ -3,5 +3,5 @@ package com.company.base.db.models
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity()
-data class SomeModel(@PrimaryKey val id: Int)
+@Entity(tableName = "some_model")
+data class SomeModel(@PrimaryKey(autoGenerate = true) val id: Long? = null, val data: String)

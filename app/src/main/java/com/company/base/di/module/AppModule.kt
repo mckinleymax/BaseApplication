@@ -13,15 +13,15 @@ import javax.inject.Singleton
     includes = [
         ViewModelModule::class,
         DatabaseModule::class,
-        NetworkModule::class])
+        NetworkModule::class]
+)
 class AppModule {
     @Provides
     @Singleton
     fun providesContext(application: Application): Context = application.applicationContext
 
-
-
     @Provides
     @Singleton
-    fun providesGson(): Gson = GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create()
+    fun providesGson(): Gson =
+        GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES).create()
 }

@@ -8,8 +8,7 @@ import com.company.base.db.dao.SomeDao
 import com.company.base.db.models.SomeModel
 
 @Database(
-    entities = [
-        SomeModel::class],
+    entities = [SomeModel::class],
     version = 1,
     exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
