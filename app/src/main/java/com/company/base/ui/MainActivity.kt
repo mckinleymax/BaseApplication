@@ -1,11 +1,11 @@
 package com.company.base.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.company.base.R
+import com.company.base.utils.getViewModel
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import javax.inject.Inject
@@ -23,11 +23,7 @@ class MainActivity: AppCompatActivity(), HasSupportFragmentInjector {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
 
-    override fun onResume() {
-        super.onResume()
-
-        Log.d("MainActivity", "OnResume")
+        viewModel = getViewModel(MainViewModel::class.java, viewModelFactory)
     }
 }

@@ -7,6 +7,7 @@ import com.company.base.di.AppInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import dagger.android.HasServiceInjector
+import timber.log.Timber
 import javax.inject.Inject
 
 class MyApplication: Application(), HasActivityInjector, HasServiceInjector  {
@@ -18,8 +19,15 @@ class MyApplication: Application(), HasActivityInjector, HasServiceInjector  {
         super.onCreate()
 
         AppInjector.init(this)
+        initTimber()
     }
 
     override fun activityInjector() = activityInjector
     override fun serviceInjector() = serviceInjector
+
+    private fun initTimber() {
+        if (BuildConfig.DEBUG) {
+            Timber.plant(Timber.DebugTree())
+        }
+    }
 }

@@ -37,10 +37,4 @@ class HomeFragment: Fragment(), Injectable {
             // Update the UI
         })
     }
-
-    override fun onResume() {
-        super.onResume()
-
-        Log.d("HomeFragment", "OnResume")
-    }
 }
